@@ -1,0 +1,110 @@
+﻿* {
+    font-family: Arial,sans-serif;
+
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url("https://www.batleydiy.co.uk/ekmps/shops/296292/images/fine-decor-quartz-fractal-geo-silver-grey-wallpaper-fd42280--8352-p.jpg");
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+   
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #555;
+        text-decoration: none;
+    }
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.listItem {
+    margin: 15px;
+}
+
+    .listItem:hover {
+        background-color: gainsboro;
+        color: black;
+    }
+
+
+    .box {
+        padding: 5px;
+        margin: 5px;
+        background-color: lightgrey;
+    }
+
+#tekovni {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+
+}
+
+.link {
+    text-decoration-style:none;
+    color:lightgrey;
+    
+}
+
+#tekst {
+    color:whitesmoke;
+    margin-left: 20px;
+}
+
+.kupibtn {
+    display:inline-block;
+    background-color: black;
+    color:white;
+    padding:10px;
+    
+
+}
+
+img {
+    max-width:100%;
+}
+
+
+select {
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+
+}
+
+#vkupno {
+    width: 100px;
+    padding: 5px;
+    margin-top:10px;
+}
+
+

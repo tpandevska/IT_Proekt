@@ -1,0 +1,41 @@
+﻿@model IEnumerable<IT_Proekt_173032.Models.Tickets>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+@if (User.IsInRole("Administrator"))
+{
+<h4>
+    @Html.ActionLink("Креирај нов настан", "Create", new { @class = "btn btn-dark" })
+</h4>
+}
+
+<ul>
+    @{
+        foreach (var c in Model)
+        {
+    <li class="col-md-3 list-group-item listItem ">
+        <h3> @Html.ActionLink(c.Name, "Details", new { id = c.Id }, new { @class = "list-group-item-header" }) </h3>
+        @Html.ActionLink("Купи Карта", "Purchase", new { id = c.Id }, new { @class = "kupibtn" })
+        <h4>
+            <p>@c.Date.ToString("dd/MM/yyyy") @c.Time.ToString("HH:mm")</p>
+            <img src="@c.ImgUrl" width="250px" height="200px" alt="slika" style="margin:5px;padding-right:10px;" />
+            <br />
+            <hr />
+            @Html.ActionLink("Детали", "Details", new { id = c.Id }, new { @class = "btn btn-default btn-sm" })
+            @if (User.IsInRole("Administrator"))
+            {
+            @Html.ActionLink("Промени", "Edit", new { id = c.Id }, new { @class = "btn btn-default btn-sm" })
+            @Html.ActionLink("Избриши", "Delete", new { id = c.Id }, new { @class = "btn btn-default btn-sm" })
+            }
+        </h4>
+    </li>
+        }
+</ul>
+<br />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
